@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="E2E Tests">
+    <listeners>
+        <listener class-name="Utils.TestListener"/>
+    </listeners>
+    <test name="E2E Tests">
+        <groups>
+            <run>
+                <include name="e2e"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="CustomerTests"></class>
+            <class name="BookstoreTests"></class>
+            <class name="ProductTests"></class>
+            <class name="CreditTests"></class>
+            <class name="OrderTests"></class>
+        </classes>
+    </test>
+</suite>

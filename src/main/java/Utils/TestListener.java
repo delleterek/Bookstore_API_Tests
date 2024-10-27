@@ -21,7 +21,7 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult result) {
-        System.out.println("The following test case execution has started: " + result.getName()):
+        System.out.println("The following test case execution has started: " + result.getName());
         ExtentTest test = extent.createTest(result.getMethod().getMethodName());
         result.getTestContext().setAttribute("ExtentTest", test);
     }
@@ -48,7 +48,7 @@ public class TestListener implements ITestListener {
         TestInfo testInfo = (TestInfo) result.getTestContext().getAttribute("testInfo");
         ExtentTest test = (ExtentTest) result.getTestContext().getAttribute("ExtentTest");
         if (testInfo != null) {
-            test.fail("Request Headers:<br>" + formatHeaders(testInfo.getRequestHeaders();
+            test.fail("Request Headers:<br>" + formatHeaders(testInfo.getRequestHeaders()));
             test.fail("Request Body:<br><pre> " + testInfo.getRequestBody() + " </pre>");
             test.fail(" Response Status: " + testInfo.getResponseStatus());
             test.fail("Response Time:" + testInfo.getResponseTime() + " ms");
